@@ -14840,7 +14840,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 44.45 38.1 0)
 			(effects
 				(font
@@ -15879,7 +15879,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 39.37 22.86 0)
 			(effects
 				(font
