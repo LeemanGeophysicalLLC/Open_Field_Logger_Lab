@@ -8,7 +8,8 @@
 	)
 	(paper "USLetter")
 	(title_block
-		(date "2024-06-05")
+		(title "Open Field Logger Lab")
+		(date "2026-06-15")
 		(rev "1.0")
 		(company "Leeman Geophysical LLC")
 		(comment 1 "(479) 373-3736")
@@ -16442,6 +16443,19 @@
 				(bold yes)
 			)
 			(justify left)
+		)
+	)
+	(gr_text "3-0000304"
+		(at 104.14 64.008 -0)
+		(layer "B.SilkS")
+		(uuid "c273ba64-efd5-4935-8747-a4b68c994ccc")
+		(effects
+			(font
+				(size 1.016 1.016)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify mirror)
 		)
 	)
 	(dimension
