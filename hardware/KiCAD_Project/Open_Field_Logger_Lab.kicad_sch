@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "Open Field Logger Lab PCB")
-		(date "2026-06-11")
-		(rev "1.0")
+		(date "2026-06-29")
+		(rev "1.1")
 		(company "Leeman Geophysical LLC")
 		(comment 1 "(479) 373-3736")
 		(comment 2 "Gentry AR, 72734")
@@ -14611,7 +14611,7 @@
 				(hide yes)
 			)
 		)
-		(property "Internal Part Number" "3-0000304"
+		(property "Internal Part Number" "3-0000307"
 			(at 17.78 168.91 0)
 			(effects
 				(font
