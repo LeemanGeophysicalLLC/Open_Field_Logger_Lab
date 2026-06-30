@@ -317,7 +317,7 @@
 			)
 			(fill no)
 			(layer "Cmts.User")
-			(uuid "ae563094-b3f1-43f2-82cf-9f43f0074939")
+			(uuid "97c65514-c566-4a4f-b806-febe115217b3")
 		)
 		(fp_circle
 			(center 0 0)
@@ -328,7 +328,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "8da7093e-fae5-4c4d-8f22-4316cd3d506f")
+			(uuid "ceb56e90-5faa-4a3c-91a4-61d1464ddca4")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0.3 0 0)
@@ -346,7 +346,7 @@
 			(size 3.81 3.81)
 			(drill 3.2639)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d0305012-74c3-4aed-8c3b-99c9311ae843")
+			(uuid "3e6e4927-56d0-48b3-9998-902538bad533")
 		)
 		(embedded_fonts no)
 	)
@@ -453,7 +453,7 @@
 			)
 			(fill no)
 			(layer "Cmts.User")
-			(uuid "50f1b7ec-7147-4069-b3a0-5d549ec548af")
+			(uuid "b1e5f1c4-1fd5-4884-ae41-76e907fe125e")
 		)
 		(fp_circle
 			(center 0 0)
@@ -464,7 +464,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "f88c4592-67ce-4739-848d-21093087dbb8")
+			(uuid "5678eb17-1224-42bb-9468-87dc19e4527c")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0.3 0 0)
@@ -482,7 +482,7 @@
 			(size 3.81 3.81)
 			(drill 3.2639)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a26d91e6-2474-4cd9-9257-3d057aa07f81")
+			(uuid "c96e604f-0032-451f-af62-0392d6e40999")
 		)
 		(embedded_fonts no)
 	)
@@ -552,7 +552,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -899,7 +899,7 @@
 			)
 			(fill no)
 			(layer "Cmts.User")
-			(uuid "715e8c03-b33e-45ae-9c79-fb2a383bf696")
+			(uuid "4c668fe4-db6c-4d58-8b76-19d08fe7768d")
 		)
 		(fp_circle
 			(center 0 0)
@@ -910,7 +910,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "176b32a3-7beb-43f7-9830-8334d04cf90d")
+			(uuid "e42de54b-bc0d-4efc-b370-d12f7529242a")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0.3 0 0)
@@ -928,7 +928,7 @@
 			(size 3.81 3.81)
 			(drill 3.2639)
 			(layers "*.Cu" "*.Mask")
-			(uuid "00bd682d-faa5-4fdf-83cd-1ba3f06983dc")
+			(uuid "e059d6cf-f86d-4eef-905f-c64cc1dc3a9c")
 		)
 		(embedded_fonts no)
 	)
@@ -999,7 +999,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1810,7 +1810,7 @@
 			)
 			(fill no)
 			(layer "Cmts.User")
-			(uuid "0ea19afd-69a1-4354-8069-9ff956e31bd4")
+			(uuid "5e979275-40c9-47be-b465-2130301d798d")
 		)
 		(fp_circle
 			(center 0 0)
@@ -1821,7 +1821,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "23f75686-eee1-4632-a6ce-81a9b5508600")
+			(uuid "745a93c6-89d8-4632-8700-0e33b818ece1")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0.3 0 0)
@@ -1839,7 +1839,7 @@
 			(size 3.81 3.81)
 			(drill 3.2639)
 			(layers "*.Cu" "*.Mask")
-			(uuid "f8e50153-f6fc-4407-a3b9-c361095799ea")
+			(uuid "a741d82f-bcc8-4842-8cc9-7be1d36d9f01")
 		)
 		(embedded_fonts no)
 	)
@@ -1909,7 +1909,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2591,7 +2591,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3269,7 +3269,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4372,7 +4372,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6344,7 +6344,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7712,7 +7712,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7911,7 +7911,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8112,7 +8112,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9976,7 +9976,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11887,7 +11887,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12030,7 +12030,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12412,7 +12412,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13636,7 +13636,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13779,7 +13779,7 @@
 				)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
