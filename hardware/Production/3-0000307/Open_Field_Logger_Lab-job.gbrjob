@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "9.0.6"
     },
-    "CreationDate": "2026-06-16T15:16:34-05:00"
+    "CreationDate": "2026-07-06T14:28:08-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "Open_Field_Logger_Lab",
       "GUID": "4f70656e-5f46-4696-956c-645f4c6f6767",
-      "Revision": "1.0"
+      "Revision": "1.1"
     },
     "Size": {
       "X": 108.1,

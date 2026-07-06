@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "Open Field Logger Lab PCB")
-		(date "2026-06-11")
-		(rev "1.0")
+		(date "2026-06-29")
+		(rev "1.1")
 		(company "Leeman Geophysical LLC")
 		(comment 1 "(479) 373-3736")
 		(comment 2 "Gentry AR, 72734")
@@ -9834,7 +9834,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 55.372 30.226 0)
 			(effects
 				(font
@@ -10858,7 +10858,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 71.12 31.75 0)
 			(effects
 				(font
@@ -11021,7 +11021,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 232.41 116.84 0)
 			(effects
 				(font
@@ -11380,7 +11380,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 232.41 93.98 0)
 			(effects
 				(font
@@ -12339,7 +12339,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 68.58 135.89 0)
 			(effects
 				(font
@@ -12896,7 +12896,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 232.41 109.22 0)
 			(effects
 				(font
@@ -13699,7 +13699,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 232.41 101.6 0)
 			(effects
 				(font
@@ -14150,7 +14150,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 73.914 130.048 0)
 			(effects
 				(font
@@ -14394,7 +14394,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 232.41 124.46 0)
 			(effects
 				(font
@@ -14611,7 +14611,7 @@
 				(hide yes)
 			)
 		)
-		(property "Internal Part Number" "3-0000304"
+		(property "Internal Part Number" "3-0000307"
 			(at 17.78 168.91 0)
 			(effects
 				(font
@@ -14840,7 +14840,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 44.45 38.1 0)
 			(effects
 				(font
@@ -15480,7 +15480,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 74.93 52.578 0)
 			(effects
 				(font
@@ -15879,7 +15879,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 39.37 22.86 0)
 			(effects
 				(font
@@ -17318,7 +17318,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 33.02 184.15 0)
 			(effects
 				(font
@@ -17412,7 +17412,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 29.21 31.75 0)
 			(effects
 				(font
@@ -18148,7 +18148,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 226.06 154.94 0)
 			(effects
 				(font
@@ -18399,7 +18399,7 @@
 				(hide yes)
 			)
 		)
-		(property "Populated" "1"
+		(property "Populated" "0"
 			(at 41.91 26.67 0)
 			(effects
 				(font
