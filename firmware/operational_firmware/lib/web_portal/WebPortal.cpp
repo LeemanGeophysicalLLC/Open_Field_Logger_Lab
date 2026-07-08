@@ -248,6 +248,21 @@ font-weight:700;color:#39ff88;text-shadow:0 0 8px rgba(57,255,136,.85),0 0 18px 
       <label><input type="checkbox" id="ch_toggle_3" checked> Channel 4</label>
     </div>
     <canvas id="graphCanvas" width="900" height="360"></canvas>
+    <div class="actions" style="align-items:center">
+      <button class="btn btn-ghost" onclick="resetGraph()">Reset Graph</button>
+      <label style="display:flex;align-items:center;gap:6px;margin-bottom:0;cursor:pointer">
+        <input type="checkbox" id="auto_yscale" checked style="width:auto" onchange="onAutoYScaleChange()">
+        Auto Y Scale
+      </label>
+      <label style="display:flex;align-items:center;gap:6px;margin-bottom:0">
+        Lower Bound (V)
+        <input type="number" id="y_min_manual" step="any" value="0" disabled onchange="drawGraph()" style="width:80px">
+      </label>
+      <label style="display:flex;align-items:center;gap:6px;margin-bottom:0">
+        Upper Bound (V)
+        <input type="number" id="y_max_manual" step="any" value="5" disabled onchange="drawGraph()" style="width:80px">
+      </label>
+    </div>
   </div>
 </section>
 
@@ -382,7 +397,7 @@ async function pollReading(){
 function drawGraph(){
   const cv = document.getElementById('graphCanvas');
   const ctx = cv.getContext('2d');
-  const padL=52, padR=14, padT=14, padB=32;
+  const padL=52, padR=14, padT=14, padB=46;
   const plotW = cv.width-padL-padR, plotH = cv.height-padT-padB;
 
   ctx.fillStyle = '#0b1f27'; ctx.fillRect(0,0,cv.width,cv.height);
@@ -396,22 +411,32 @@ function drawGraph(){
   // Y axis starts at the nominal 0V-to-full-scale range for the selected
   // gain (inputs are single-ended and ground-referenced, so they never go
   // negative), then autoscales to whatever the visible channels are
-  // actually doing once there's data to look at.
+  // actually doing once there's data to look at. With Auto Y Scale turned
+  // off, the two manual bound fields are used verbatim instead.
   const fs = GAIN_FULL_SCALE[currentGainIndex] || 4.096;
   let vMin = 0, vMax = fs;
-  const visibleVals = [];
-  for(const p of graphBuffer){
-    for(let ch=0; ch<4; ch++){
-      const toggle = document.getElementById('ch_toggle_'+ch);
-      if(toggle && toggle.checked) visibleVals.push(p.v[ch]);
+  const autoScale = document.getElementById('auto_yscale').checked;
+  if(autoScale){
+    const visibleVals = [];
+    for(const p of graphBuffer){
+      for(let ch=0; ch<4; ch++){
+        const toggle = document.getElementById('ch_toggle_'+ch);
+        if(toggle && toggle.checked) visibleVals.push(p.v[ch]);
+      }
     }
-  }
-  if(visibleVals.length>0){
-    vMin = Math.min(...visibleVals);
-    vMax = Math.max(...visibleVals);
-    const pad = Math.max((vMax-vMin)*0.1, 0.01);
-    vMin -= pad; vMax += pad;
-    if(vMax-vMin < 1e-6) vMax = vMin+1;
+    if(visibleVals.length>0){
+      vMin = Math.min(...visibleVals);
+      vMax = Math.max(...visibleVals);
+      const pad = Math.max((vMax-vMin)*0.1, 0.01);
+      vMin -= pad; vMax += pad;
+      if(vMax-vMin < 1e-6) vMax = vMin+1;
+    }
+  } else {
+    const manualMin = parseFloat(document.getElementById('y_min_manual').value);
+    const manualMax = parseFloat(document.getElementById('y_max_manual').value);
+    vMin = isFinite(manualMin) ? manualMin : 0;
+    vMax = isFinite(manualMax) ? manualMax : fs;
+    if(vMax <= vMin) vMax = vMin+1;
   }
 
   const xPix = t => padL + ((t-tMin)/((tMax-tMin)||1))*plotW;
@@ -423,15 +448,17 @@ function drawGraph(){
   ctx.lineWidth = 1;
 
   // X axis: gridlines every 30s across the fixed window, labeled in
-  // seconds relative to "now" (0 = now, negative = seconds ago).
+  // seconds relative to "now" (0 = now, negative = seconds ago). The axis
+  // title sits on its own row below those tick labels (mirroring how
+  // "Voltage (V)" sits clear of the y-tick labels) rather than sharing a
+  // row with the "0s" tick, which used to overlap it.
   ctx.textAlign = 'center';
   for(let secAgo=120; secAgo>=0; secAgo-=30){
     const x = xPix(tMax - secAgo*1000);
     ctx.beginPath(); ctx.moveTo(x,padT); ctx.lineTo(x,padT+plotH); ctx.stroke();
-    ctx.fillText((-secAgo)+'s', x, cv.height-10);
+    ctx.fillText((-secAgo)+'s', x, padT+plotH+16);
   }
-  ctx.textAlign = 'right';
-  ctx.fillText('Time (s)', cv.width-padR, cv.height-10);
+  ctx.fillText('Time (s)', padL+plotW/2, padT+plotH+34);
 
   // Y axis: a handful of evenly-spaced ticks labeled in volts.
   const yTicks = 4;
@@ -463,6 +490,24 @@ function drawGraph(){
     }
     ctx.stroke();
   }
+}
+
+// Clears the 2-minute buffer and forces the very next reading to be
+// accepted (rather than waiting out GRAPH_PUSH_INTERVAL_MS), so the graph
+// starts fresh immediately. With the buffer empty, drawGraph()'s autoscale
+// falls back to the nominal 0V-to-full-scale range, which is what "resetting
+// the graph bounds" means here.
+function resetGraph(){
+  graphBuffer = [];
+  lastGraphPushMs = -Infinity;
+  drawGraph();
+}
+
+function onAutoYScaleChange(){
+  const auto = document.getElementById('auto_yscale').checked;
+  document.getElementById('y_min_manual').disabled = auto;
+  document.getElementById('y_max_manual').disabled = auto;
+  drawGraph();
 }
 
 async function loadSettings(){

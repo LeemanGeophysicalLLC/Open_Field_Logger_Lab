@@ -31,14 +31,26 @@ class SdLogger {
   bool isReady() const { return sd_ready_; }
 
   // Scans for the next available logNNN.txt and opens it for this session,
-  // writing the CSV header row. Fails (returns false, fills err) if the
+  // writing the CSV header row. `dt` is the RTC date this session is
+  // starting on, remembered so rolloverIfNewDay() can tell when the
+  // calendar day has changed. Fails (returns false, fills err) if the
   // card is missing/unreadable or if log999.txt already exists (no numbers
   // left). On failure, the caller must NOT mark logging as active.
-  bool startNewLogSession(char *err, size_t err_len);
+  bool startNewLogSession(const RtcDateTime &dt, char *err, size_t err_len);
 
   // Closes out the current session. Nothing special to flush since every
   // row is already flushed+closed as it's written.
   void endLogSession();
+
+  // Call once per logged sample, before appendRecord(), with the RTC date
+  // for that sample. If the date differs from the one the current session
+  // started on, closes the current file and opens the next sequentially-
+  // numbered one — so a long-running deployment gets one file per calendar
+  // day instead of a single file that grows without bound. No-op if no
+  // session is currently open. Best-effort: a failure to open the next file
+  // latches hasError() the same way a normal startNewLogSession() failure
+  // would, via the same underlying call.
+  void rolloverIfNewDay(const RtcDateTime &dt);
 
   // Appends one CSV row to the current session's file. Returns false (and
   // latches hasError()) if the write fails, e.g. the card fills up.
@@ -59,6 +71,13 @@ class SdLogger {
 
   char current_file_name_[16] = "";  // "" when no session is open
   uint32_t samples_logged_ = 0;
+
+  // RTC date the current session's file was opened on, so rolloverIfNewDay()
+  // can detect a calendar-day change. Meaningless while current_file_name_
+  // is empty.
+  uint16_t session_year_ = 0;
+  uint8_t session_month_ = 0;
+  uint8_t session_day_ = 0;
 
   bool error_active_ = false;
   char error_reason_[48] = "";

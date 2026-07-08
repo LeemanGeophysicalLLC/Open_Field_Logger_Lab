@@ -86,18 +86,34 @@ void SamplingEngine::finalizeCycle(uint32_t now_ms) {
   achieved_sample_hz_ = elapsed_ms > 0 ? (1000.0f / static_cast<float>(elapsed_ms)) : 0.0f;
 
   if (logging_active_ && sd_logger_ != nullptr) {
-    SampleRecord record;
-    record.uptime_ms = now_ms;
-    record.channels = latest_;
-
     RtcDateTime dt;
-    if (rtc_ != nullptr && rtc_->now(dt)) {
-      Mcp7940Rtc::formatTimestamp(dt, record.timestamp, sizeof(record.timestamp));
-    } else {
-      strlcpy(record.timestamp, "--", sizeof(record.timestamp));
+    const bool have_time = rtc_ != nullptr && rtc_->now(dt);
+    if (have_time) {
+      // Checked ahead of every append (cheap: just a struct compare unless
+      // the day actually rolled over) so a long-running session never
+      // grows one file without bound — it gets split at midnight instead.
+      sd_logger_->rolloverIfNewDay(dt);
     }
 
-    sd_logger_->appendRecord(record);
+    if (sd_logger_->currentLogFileName()[0] == '\0') {
+      // rolloverIfNewDay() couldn't open the next day's file (e.g. the card
+      // was pulled, or all 999 log numbers are used) — drop out of the
+      // logging state instead of silently spinning on a session that no
+      // longer exists. hasError()/errorReason() are already latched by the
+      // failed startNewLogSession() inside rolloverIfNewDay(), so the Error
+      // LED and the web page's error banner reflect this immediately.
+      logging_active_ = false;
+    } else {
+      SampleRecord record;
+      record.uptime_ms = now_ms;
+      record.channels = latest_;
+      if (have_time) {
+        Mcp7940Rtc::formatTimestamp(dt, record.timestamp, sizeof(record.timestamp));
+      } else {
+        strlcpy(record.timestamp, "--", sizeof(record.timestamp));
+      }
+      sd_logger_->appendRecord(record);
+    }
   }
 
   // Schedule the next cycle a fixed `target_period_ms_` after this one

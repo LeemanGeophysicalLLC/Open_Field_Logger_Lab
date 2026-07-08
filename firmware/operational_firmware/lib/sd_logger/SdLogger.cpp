@@ -65,7 +65,7 @@ int SdLogger::findHighestLogNumber() {
   return highest;
 }
 
-bool SdLogger::startNewLogSession(char *err, size_t err_len) {
+bool SdLogger::startNewLogSession(const RtcDateTime &dt, char *err, size_t err_len) {
   if (!sd_ready_ || !isCardPresent()) {
     setError("SD card not present");
     if (err != nullptr) snprintf(err, err_len, "%s", error_reason_);
@@ -97,6 +97,9 @@ bool SdLogger::startNewLogSession(char *err, size_t err_len) {
 
   strlcpy(current_file_name_, name, sizeof(current_file_name_));
   samples_logged_ = 0;
+  session_year_ = dt.year;
+  session_month_ = dt.month;
+  session_day_ = dt.day;
   clearError();
   return true;
 }
@@ -105,6 +108,21 @@ void SdLogger::endLogSession() {
   // Every row is already flushed+closed as it's written, so there's nothing
   // left to finalize — just forget the filename so the web page shows idle.
   current_file_name_[0] = '\0';
+}
+
+void SdLogger::rolloverIfNewDay(const RtcDateTime &dt) {
+  if (current_file_name_[0] == '\0') return;  // no session open
+  if (dt.year == session_year_ && dt.month == session_month_ && dt.day == session_day_) {
+    return;
+  }
+
+  endLogSession();
+  char err[48] = "";
+  startNewLogSession(dt, err, sizeof(err));
+  // On failure this leaves current_file_name_ empty and hasError() latched
+  // (set inside startNewLogSession), exactly like a session that failed to
+  // start from the button — the caller's next appendRecord() will simply
+  // no-op until logging is manually restarted.
 }
 
 bool SdLogger::appendRecord(const SampleRecord &record) {

@@ -254,7 +254,10 @@ void loop() {
       g_sdlog.endLogSession();
     } else {
       char err[48] = "";
-      if (g_sdlog.startNewLogSession(err, sizeof(err))) {
+      RtcDateTime dt;  // defaults (2026-01-01) are fine if the RTC read fails —
+                       // that state's already surfaced via the Error LED / rtc_ok
+      g_rtc.now(dt);
+      if (g_sdlog.startNewLogSession(dt, err, sizeof(err))) {
         g_engine.setLoggingActive(true);
       }
       // else: session couldn't start (no card / 999 exhausted) — stay idle;
