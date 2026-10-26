@@ -1,4 +1,4 @@
-27751141443231217
+27871545668011868
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -104355,6 +104355,13 @@ VSSOP SO
 0
 10
 10
+adcs
+1-0001942
+32-TQFP
+32-TQFP
+0
+32
+32
 amplifiers
 1-0000039
 Instrumentation Amplifier 1 Circuit  8-SOIC
@@ -104670,6 +104677,13 @@ SOIC-14
 0
 14
 14
+amplifiers
+1-0001921
+8-SOIC SO
+8-SOIC SO
+0
+8
+8
 batteries
 1-0000131
 Battery Holder (Open) Coin, 16.0mm 1 Cell SMD (SMT) Tab
@@ -104786,6 +104800,13 @@ capacitors
 1-0001706
 
 UWT1E471MNL1GS 
+0
+2
+2
+capacitors
+1-0001948
+0.327" L x 0.327" W (8.30mm x 8.30mm)
+0.327" L x 0.327" W (8.30mm x 8.30mm)
 0
 2
 2
@@ -105062,6 +105083,13 @@ capacitor
 0
 2
 2
+capacitors_0603
+1-0001914
+Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+capacitor
+0
+2
+2
 capacitors_0805
 1-0000016
 Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal
@@ -105160,6 +105188,13 @@ capacitor 1206
 0
 2
 2
+capacitors_1206
+1-0001917
+capacitor 1206
+capacitor 1206
+0
+2
+2
 capacitors_1210
 1-0000164
 Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
@@ -105234,6 +105269,13 @@ capacitors_th
 1-0001876
 
 
+0
+2
+2
+capacitors_th
+1-0001956
+0.846" Dia / 0.374" Height
+0.846" Dia / 0.374" Height
 0
 2
 2
@@ -105795,7 +105837,7 @@ connectors
 half connector of auto blade fuse
 half connector of auto blade fuse
 0
-1
+2
 1
 connectors
 1-0001899
@@ -105804,6 +105846,27 @@ connectors
 0
 2
 2
+connectors
+1-0001930
+
+
+0
+28
+28
+connectors
+1-0001959
+
+
+0
+2
+2
+connectors
+1-0001974
+Custom USB-C SMD
+Custom USB-C SMD
+0
+16
+16
 crystals_resonators
 1-0000041
 16MHz ±30ppm Crystal 20pF 40 Ohms HC-49/US
@@ -106140,6 +106203,20 @@ Custom 3-SIP
 0
 3
 3
+dc_dc_converters
+1-0001912
+
+
+0
+6
+6
+dc_dc_converters
+1-0001972
+3-SIP Module
+3-SIP Module
+0
+3
+3
 diodes
 1-0000003
 SOD-323
@@ -106420,6 +106497,55 @@ Custom Diode
 0
 2
 2
+diodes
+1-0001913
+
+SMCJ17CA 
+0
+2
+2
+diodes
+1-0001919
+SOT TO_SOT_SMD
+SOT TO_SOT_SMD
+0
+3
+3
+diodes
+1-0001931
+SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
+0
+6
+6
+diodes
+1-0001941
+
+MBRM120LT1G 
+0
+2
+2
+diodes
+1-0001955
+SOT TO_SOT_SMD
+SOT TO_SOT_SMD
+0
+3
+3
+diodes
+1-0001971
+
+
+0
+2
+2
+diodes
+1-0001977
+
+
+0
+2
+2
 displays
 1-0000835
 LCD 16x2 http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf
@@ -106448,6 +106574,13 @@ HSOP SO
 0
 13
 9
+drivers
+1-0001916
+custom laser driver footprint
+custom laser driver footprint
+0
+14
+14
 eeproms
 1-0000107
 EEPROM Memory IC 1Mb (128K x 8) I²C 1MHz 550ns 8-SOIC
@@ -106494,6 +106627,27 @@ eeproms
 1-0001870
 8-SOP SMD
 8-SOP SMD
+0
+8
+8
+eeproms
+1-0001932
+
+
+0
+9
+9
+eeproms
+1-0001954
+EEPROM Memory IC 32Kbit I2C 1 MHz 550 ns 8-SOIC
+IC EEPROM 32KBIT I2C 1MHZ 8SOIC
+0
+8
+8
+eeproms
+1-0001976
+8-SOIC
+8-SOIC
 0
 8
 8
@@ -106623,6 +106777,13 @@ fuses
 0
 2
 2
+fuses
+1-0001963
+16-HTSSOP
+16-HTSSOP
+0
+17
+17
 inductors
 1-0000088
 22µH Shielded Wirewound Inductor 4.1A 43mOhm Max Nonstandard 
@@ -106693,6 +106854,13 @@ inductor
 0
 2
 2
+inductors_0805
+1-0001952
+0805 Inductors
+0805 Inductors
+0
+2
+2
 isolators
 1-0000950
 SOIC, 8 Pin 
@@ -106728,6 +106896,20 @@ TH Lamp
 0
 4
 2
+leds_0402
+1-0001906
+Custom 0402 Footprint
+Custom 0402 Footprint
+0
+2
+2
+leds_0603
+1-0001385
+0603 Custom LED Footprint
+0603 Custom LED Footprint
+0
+2
+2
 leds_0805
 1-0000598
 LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
@@ -106760,6 +106942,13 @@ leds_1206
 1-0000156
 Blue 470nm LED Indication - Discrete 3.3V 1206 (3216 Metric)
 LED BLUE CLEAR 1206 SMD
+0
+2
+2
+leds_1206
+1-0000509
+Green 568nm LED Indication - Discrete 2.2V 1206 (3216 Metric)
+LED GREEN CLEAR CHIP SMD
 0
 2
 2
@@ -107232,6 +107421,13 @@ Custom ESP32 2.54mm pitch 19x10
 0
 38
 38
+microcontrollers
+1-0001927
+
+ESP32-S3-WROOM-1-N16R8 
+0
+49
+49
 misc
 1-0001241
 SOT-23, Standard
@@ -107271,6 +107467,13 @@ mosfets
 1-0000163
 SOT-23, Standard
 SOT-23
+0
+3
+3
+mosfets
+1-0000314
+D2PAK-3
+D2PAK-3
 0
 3
 3
@@ -107428,6 +107631,27 @@ SOT-23
 0
 3
 3
+mosfets
+1-0001939
+
+SOT TO_SOT_SMD
+0
+3
+3
+mosfets
+1-0001953
+
+SOT TO_SOT_SMD
+0
+3
+3
+mosfets
+1-0001970
+TO-236-3
+TO-236-3
+0
+3
+3
 motor_drivers
 1-0000168
 SMD 8-SO Power Pad
@@ -107558,6 +107782,13 @@ np_connectors
 PinHeader_2x03_P2.54mm_Vertical
 Through hole straight pin header, 2x03, 2.54mm pitch, double rows
 Through hole pin header THT 2x03 2.54mm double row
+0
+6
+6
+np_connectors
+Serial_Flipper
+Serial_Flipper
+Serial_Flipper
 0
 6
 6
@@ -107828,6 +108059,13 @@ SOT-23-THIN
 6
 6
 others
+1-0001768
+Through hole straight pin header, 2x10, 2.00mm pitch, double rows
+Through hole pin header THT 2x10 2.00mm double row
+0
+20
+20
+others
 1-0001802
 
 SC16IS752IPW_128 
@@ -107848,6 +108086,27 @@ others
 0
 28
 28
+others
+1-0001929
+8-vssop
+8-vssop
+0
+8
+8
+others
+1-0001934
+453-00139R Custom
+453-00139R Custom
+0
+47
+47
+others
+1-0001937
+14-TSSOP
+14-TSSOP
+0
+14
+14
 others
 SMPL SD Breakout
 Custom Panel Mount Footprint
@@ -108058,6 +108317,13 @@ TO-236-3, SC-59, SOT-23-3
 0
 3
 3
+references
+1-0001943
+8SOIC
+8SOIC
+0
+8
+8
 regulators
 1-0000030
 SMD SOT-223-3
@@ -108261,6 +108527,62 @@ regulators
 0
 5
 5
+regulators
+1-0001915
+SOT, 3 Pin (JEDEC MO-178 inferred 3-pin variant https://www.jedec.org/document_search?search_api_views_fulltext=MO-178), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
+0
+3
+3
+regulators
+1-0001936
+20-VFQFN Exposed Pad
+20-VFQFN Exposed Pad
+0
+29
+29
+regulators
+1-0001940
+SOT-6_S
+SOT-6_S
+0
+6
+6
+regulators
+1-0001944
+8-HVSSOP
+8-HVSSOP 
+0
+9
+9
+regulators
+1-0001947
+HSOP, 8 Pin Exposed Pad 3.9mm W
+HSOP SO
+0
+13
+9
+regulators
+1-0001949
+Custom
+Custom
+0
+10
+10
+regulators
+1-0001964
+ 8-HVSSOP
+ 8-HVSSOP
+0
+9
+9
+regulators
+1-0001973
+module CMS SOT223 4 pins
+CMS SOT
+0
+4
+3
 relays
 1-0000118
 Telecom Relay DPDT (2 Form C) Through Hole
@@ -108443,6 +108765,13 @@ resistors
 0
 4
 4
+resistors_0402
+1-0001904
+Custom 0402 Footprint
+Custom 0402 Footprint
+0
+2
+2
 resistors_0603
 1-0000006
 Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
@@ -109570,6 +109899,111 @@ resistor
 0
 2
 2
+resistors_0603
+1-0001923
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001924
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001925
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001926
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001933
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001945
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001946
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001950
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001951
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001960
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001961
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001962
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001965
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001966
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
+resistors_0603
+1-0001968
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
 resistors_0805
 1-0000100
 Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal
@@ -109808,6 +110242,13 @@ resistor
 0
 2
 2
+resistors_0805
+1-0001967
+Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal
+resistor
+0
+2
+2
 resistors_1206
 1-0000846
 Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
@@ -109922,6 +110363,13 @@ RES 0.025 OHM 1% 3W 2512
 2
 resistors_2512
 1-0001516
+SMD Resistor Footprint 2512
+SMD Resistor Footprint 2512
+0
+2
+2
+resistors_2512
+1-0001938
 SMD Resistor Footprint 2512
 SMD Resistor Footprint 2512
 0
@@ -110088,6 +110536,13 @@ Custom Trim Pot
 0
 3
 3
+resistors_variable
+1-0001918
+Custom Variable Resistor footprint
+Custom Variable Resistor footprint
+0
+3
+3
 rtcs
 1-0000133
 Real Time Clock (RTC) IC Clock/Calendar  I²C, 2-Wire Serial 16-SOIC (0.295", 7.50mm Width)
@@ -110099,6 +110554,13 @@ rtcs
 1-0001892
 8-DIP
 8-DIP
+0
+8
+8
+rtcs
+1-0001928
+8SON
+8SON
 0
 8
 8
@@ -110284,6 +110746,13 @@ Custom Thermistor TH
 0
 2
 2
+sensors
+1-0001910
+SOT536
+SOT-536
+0
+6
+6
 switch_mux_demux
 1-0000059
 1 Circuit IC Switch 2:1 2.4Ohm 8-MSOP
