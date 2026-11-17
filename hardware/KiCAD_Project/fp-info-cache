@@ -1,4 +1,4 @@
-27871545668011868
+27873606762804712
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -105578,8 +105578,8 @@ connectors
 3.50mm (0.141", 1/8", Mini Plug) - Headphone
 3.50mm (0.141", 1/8", Mini Plug) - Headphone
 0
-5
-4
+3
+3
 connectors
 1-0001139
 Custom Footprint
@@ -110753,6 +110753,13 @@ SOT-536
 0
 6
 6
+sensors
+1-0001978
+Custom SMD Breakout
+Custom SMD Breakout
+0
+8
+8
 switch_mux_demux
 1-0000059
 1 Circuit IC Switch 2:1 2.4Ohm 8-MSOP

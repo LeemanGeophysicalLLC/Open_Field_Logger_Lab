@@ -527,7 +527,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "../Production/BOM/KiCAD_raw_BOM.csv",
+    "bom_export_filename": "..\\Production\\BOM\\KiCAD_raw_BOM.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -552,7 +552,7 @@
           "group_by": false,
           "label": "Value",
           "name": "Value",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -645,7 +645,7 @@
     },
     "net_format_name": "KiCad",
     "page_layout_descr_file": "",
-    "plot_directory": "../../../../Downloads/",
+    "plot_directory": "../PDFs/",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
