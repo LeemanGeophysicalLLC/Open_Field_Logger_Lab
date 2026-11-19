@@ -5,16 +5,16 @@
       "Application": "Pcbnew",
       "Version": "9.0.6"
     },
-    "CreationDate": "2026-07-06T14:28:08-05:00"
+    "CreationDate": "2026-11-17T14:35:59-06:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "Open_Field_Logger_Lab",
       "GUID": "4f70656e-5f46-4696-956c-645f4c6f6767",
-      "Revision": "1.1"
+      "Revision": "1.2"
     },
     "Size": {
-      "X": 108.1,
+      "X": 89.05,
       "Y": 70.0
     },
     "LayerNumber": 4,
